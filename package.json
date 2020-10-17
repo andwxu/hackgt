@@ -8,8 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "google-auth-library": "^6.1.1",
+    "googleapis": "^27.0.0",
     "next": "9.5.5",
     "react": "16.14.0",
     "react-dom": "16.14.0"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
