@@ -1,19 +1,28 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { useSpring, animated } from 'react-spring';
 
 export default function Home() {
+  const background_spring = useSpring({
+    to: {
+        background: "#00ADD9",
+    },
+    from: { 
+        background: "#FFFFFF",
+    },
+    delay: 100,
+  });
+
   return (
-    <div className={styles.container}>
+    <animated.div className={styles.container} style={background_spring}>
       <Head>
         <title>Ordering</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Name Placeholder
-        </h1>
+        <img className={styles.img} src="/junction.png" alt="My image" />
 
         <p className={styles.description}>
           Login
@@ -31,6 +40,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-    </div>
+    </animated.div>
   )
 }
