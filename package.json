@@ -1,32 +1,28 @@
 {
   "name": "hackgt",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT"
   },
-  "author": "Andrew Xu",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andwxu/hackgt.git"
-  },
-  "bugs": {
-    "url": "https://github.com/andwxu/hackgt/issues"
-  },
-  "homepage": "https://github.com/andwxu/hackgt#readme",
-  "description": "",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "css-loader": "^5.0.0",
+    "file-loader": "^6.1.1",
     "google-auth-library": "^6.1.1",
-    "googleapis": "^61.0.0",
-    "ngrok": "^3.3.0",
-    "nodemon": "^2.0.5"
+    "googleapis": "^27.0.0",
+    "next": "9.5.5",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-spring": "^8.0.27",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1"
   },
-  "devDependencies": {
-    "prettier": "2.1.2"
-  }
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
