@@ -92,9 +92,10 @@ for menu_item in menu: #construct each bar
     plt.bar((position_base + i), bar, color=rgb, width = barWidth, edgecolor = 'white', label = menu_item, align='edge')
     i = i + .5/len(menu)
 
-plt.legend()   
-plt.show()
-mpld3.save_html(plt.figure(), "test.html")
+plt.legend()
+plt.savefig('../public/test.png')   
+#plt.show()
+mpld3.save_json(plt.figure(), "../public/test.json")
 
 
 #ordered_foods = []

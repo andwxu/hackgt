@@ -29,15 +29,16 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/nav/home"><a href="https://nextjs.org/docs" className={styles.card}>
+          <Link href="/nav/home"><a className={styles.card}>
             <h3>Here to order food &rarr;</h3>
             <p>Browse our selection of local restaurants</p>
           </a></Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <Link href="/nav/owner">
+          <a className={styles.card}>
             <h3>Here to manage a restaurant &rarr;</h3>
             <p>Check analytics of your local restaurant</p>
-          </a>
+          </a></Link>
         </div>
       </main>
     </animated.div>
