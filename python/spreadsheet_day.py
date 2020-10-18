@@ -91,24 +91,6 @@ for menu_item in menu: #construct each bar
     rgb = (r, g, b)
     plt.bar((position_base + i), bar, color=rgb, width = barWidth, edgecolor = 'white', label = menu_item, align='edge')
     i = i + .5/len(menu)
-<<<<<<< HEAD:python/spreadsheet.py
-
-plt.legend()
-plt.savefig('../public/test.png')   
-#plt.show()
-mpld3.save_json(plt.figure(), "../public/test.json")
-
-
-#ordered_foods = []
-#ordered_quantities = []
-#print(items)
-#for item in items:
-#    ordered_foods.append(item)
-#    ordered_quantities.append(items[item])
-#x_pos = [i for i, _ in enumerate(ordered_foods)]
-#plt.bar(x_pos, ordered_quantities, color='blue')
-#plt.xticks(x_pos, ordered_foods)
-#plt.show()
 =======
 plt.ylim(0, max(round(max_val) + .5, 1))
 plt.legend()   
