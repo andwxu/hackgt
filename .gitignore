@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 .env
-./python/sheets_data.json
+/python/sheets_data.json
 /node_modules
-=======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -38,4 +36,3 @@ yarn-error.log*
 
 # vercel
 .vercel
->>>>>>> 2f7491b90f813d72704accc65d5333ddacd60b31
