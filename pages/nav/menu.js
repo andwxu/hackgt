@@ -449,7 +449,7 @@ export default function Menu() {
                     <h1 className={styles.card_tag}></h1>
                     <h1 className={styles.card_price}>$10</h1>
                 </animated.div></div>
-                <button className={styles.button} onClick={order}>Order</button>
+                <Link href="/nav/order"><button className={styles.button} onClick={order}>Order</button></Link>
             </div>
             <div className={styles.cart}>{clicked[0]}</div>
             <div className={styles.bottom_nav}>
