@@ -69,7 +69,6 @@
     margin: 0;
     font-size: 20px;
     font-weight: normal;
-    color: #C4c4c4;
 }
 
 .info_bubble {
@@ -85,7 +84,7 @@
     position: absolute;
     top: 380px;
     width: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 }
 
 .menu_header {
@@ -144,12 +143,25 @@
     font-size: 18px;
     padding: 2px 0 2px 5px;
     margin: 0;
-    color: #c4c4c4;
 }
 
-.cart {
-    height: 50px;
-    width: 50px;
+.button {
+    position: absolute;
+    background: #222;
+    height: 40px;
+    min-width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    font-size: 25px;
+    transition: 1s;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 5px;
+    right: 5px;
 }
 
 .bottom_nav {

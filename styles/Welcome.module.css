@@ -22,7 +22,7 @@
 }
 
 .content {
-    padding: 0 0 5rem 0;
+    padding: 0 0 10rem 0;
     align-items: center;
     flex: 1;
     display: flex;
@@ -115,4 +115,23 @@
     padding: 0 5px 0 5px;
     color: white;
     font-weight: lighter;
+}
+
+.button {
+    position: absolute;
+    background: #222;
+    height: 40px;
+    min-width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    font-size: 25px;
+    transition: 1s;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 5px;
+    bottom: -60px;
 }

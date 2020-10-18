@@ -95,7 +95,7 @@ export default function Home() {
                         <h1 className={styles.second_image}>El Super Pan</h1>
                     </a>
                 </animated.div>
-                <Link href="/"><button>Logout</button></Link>
+                <Link href="/"><button className={styles.button}>Logout</button></Link>
             </div>
             <div className={styles.bottom_nav}>
                 <Link href="/nav/home"><img className={styles.bottom_img} src="/bottom.png" /></Link>
