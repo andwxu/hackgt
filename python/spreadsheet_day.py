@@ -91,7 +91,6 @@ for menu_item in menu: #construct each bar
     rgb = (r, g, b)
     plt.bar((position_base + i), bar, color=rgb, width = barWidth, edgecolor = 'white', label = menu_item, align='edge')
     i = i + .5/len(menu)
-=======
 plt.ylim(0, max(round(max_val) + .5, 1))
 plt.legend()   
 plt.savefig('../public/avg_day.png')
