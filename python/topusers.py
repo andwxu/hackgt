@@ -12,16 +12,15 @@ client = gspread.authorize(creds)
 sheet = client.open("Orders").sheet1
 list_of_orders = sheet.get_all_values()
 
-deliv_methods = {'dine-in': 0, 'delivery': 0, 'curbside': 0}
+deliv_methods = {'asdonelan': 0, 'andwxu': 0, 'ppunmaneeluk': 0, 'aditibhatia':0}
 for order in list_of_orders:
-    deliv_methods[order[5]] = deliv_methods[order[5]] + 1
-types = ["Dine-in", 'Curbside', 'Delivery']
+    deliv_methods[order[0]] = deliv_methods[order[0]] + 1
+types = ['asdonelan', 'andwxu', 'ppunmaneeluk', 'aditibhatia']
 fig, ax = plt.subplots()
 values = list(deliv_methods.values())
 print(values)
 print(types)
 ax.pie(values, labels=types, autopct='%1.2f%%')
-ax.set_title("Customer Delivery Method Preference")
-plt.savefig('../public/delivery_types.png')
+ax.set_title("Your Top Customers")
 plt.show()
 

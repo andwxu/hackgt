@@ -4,43 +4,55 @@ import Link from 'next/link'
 import { useSpring, animated } from 'react-spring';
 
 export default function Home() {
-  const background_spring = useSpring({
+  const card1_spring = useSpring({
     to: {
-        background: "#00ADD9",
+        background: '#00ADD9',
     },
     from: { 
-        background: "#FFFFFF",
+        background: '#c4c4c4',
     },
-    delay: 100,
+    delay: 300,
+  });
+  const card2_spring = useSpring({
+    to: {
+        background: '#00ADD9',
+    },
+    from: { 
+        background: '#c4c4c4',
+    },
+    delay: 500,
   });
 
   return (
-    <animated.div className={styles.container} style={background_spring}>
+    <div className={styles.container}>
       <Head>
         <title>Ordering</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <img className={styles.img} src="/junction.png" alt="My image" />
+        <img className={styles.img} src="/fulllogo.png" alt="My image" />
 
         <p className={styles.description}>
           Login
         </p>
 
+        <div className={styles.food_overlay}></div>
+        <img className={styles.food} src="/food.jpg"/>
+
         <div className={styles.grid}>
-          <Link href="/nav/home"><a className={styles.card}>
+          <Link href="/nav/home"><animated.a className={styles.card} style={card1_spring}>
             <h3>Here to order food &rarr;</h3>
             <p>Browse our selection of local restaurants</p>
-          </a></Link>
+          </animated.a></Link>
 
           <Link href="/nav/owner">
-          <a className={styles.card}>
+          <animated.a className={styles.card} style={card2_spring}>
             <h3>Here to manage a restaurant &rarr;</h3>
             <p>Check analytics of your local restaurant</p>
-          </a></Link>
+          </animated.a></Link>
         </div>
       </main>
-    </animated.div>
+    </div>
   )
 }
