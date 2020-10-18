@@ -7,6 +7,7 @@ import numpy as np
 import random
 import re
 import os
+import mpld3
 
 
 # use creds to create a client to interact with the Google Drive API
@@ -93,6 +94,7 @@ for menu_item in menu: #construct each bar
 
 plt.legend()   
 plt.show()
+mpld3.save_html(plt.figure(), "test.html")
 
 
 #ordered_foods = []
