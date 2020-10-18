@@ -95,4 +95,3 @@ plt.ylim(0, max(round(max_val) + .5, 1))
 plt.legend()   
 plt.savefig('../public/avg_day.png')
 plt.show()
->>>>>>> 6f76d6e7c67a4f7354fe70d0d5df3499aff164ed:python/spreadsheet_day.py
