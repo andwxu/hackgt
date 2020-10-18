@@ -1,0 +1,170 @@
+.header {
+    height: 225px;
+    text-align: bottom;
+    justify-content: bottom;
+}
+
+.header_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header_text {
+    position: absolute;
+    top: 170px;
+    left: 5px;
+    color: white;
+    z-index: 5;
+    margin: 0;
+}
+
+.header_overlay {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0), rgba(0, 0, 0));
+    height: 100px;
+    width: 100%;
+    top: 125px;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    top: 211px;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.info_add {
+    font-size: 18px;
+    margin: 2px 0 0 5px;
+}
+
+.info_desc {
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0 0 0 5px;
+}
+
+.info_time {
+    color: #0093B8;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+.info_grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.info_items {
+    padding: 0 15px 0 15px;
+}
+
+.info_items_text {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: #C4c4c4;
+}
+
+.info_bubble {
+    background-color: #008FB2;
+    border-radius: 15px;
+    padding: 8px;
+    margin-top: 5px;
+    font-weight: normal;
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    top: 380px;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+
+.menu_header {
+    margin: 10px 0 0 5px;
+}
+
+.card {
+    margin: 0px;
+    flex-basis: 45%;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    position: relative;
+    min-height: 110px;
+    min-width: 95%;
+}
+
+.card_img {
+    margin: 5px 0 0 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card_tag {
+    position: absolute;
+    left: 130px;
+    word-wrap: break-word;
+    max-width: 200px;
+    top: 15px;
+    font-size: 18px;
+    padding: 2px 0 2px 5px;
+    margin: 0;
+    color: #0ADD90;
+}
+
+.card_title {
+    position: absolute;
+    left: 130px;
+    word-wrap: break-word;
+    max-width: 200px;
+    bottom: 15px;
+    font-size: 18px;
+    padding: 2px 0 2px 5px;
+    margin: 0;
+}
+
+.card_price {
+    position: absolute;
+    right: 10px;
+    word-wrap: break-word;
+    max-width: 200px;
+    bottom: 35px;
+    font-size: 18px;
+    padding: 2px 0 2px 5px;
+    margin: 0;
+    color: #c4c4c4;
+}
+
+.cart {
+    height: 50px;
+    width: 50px;
+}
+
+.bottom_nav {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: #0093B8;
+    bottom: 0;
+    border-radius: 15px 15px 0 0;
+}
+
+.bottom_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 5px;
+}

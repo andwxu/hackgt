@@ -101,13 +101,13 @@ export default function Restaurant() {
                     <h1 className={styles.card_desc}>$ | Donuts | 0.8 mi</h1>
                     <h1 className={styles.card_hours}>Hours: 8 AM - 8 PM</h1>
                 </animated.div>
-                <animated.div style={card3_spring} className={styles.card}>
+                <Link href="/nav/menu"><animated.div style={card3_spring} className={styles.card}>
                     <img className={styles.card_img} src="/twisted.jpeg" />
                     <h1 className={styles.card_text}>Twisted Soul Cookhouse</h1>
                     <div className={styles.card_overlay}></div>
                     <h1 className={styles.card_desc}>$$ | Southern | 1.7 mi</h1>
                     <h1 className={styles.card_hours}>Hours: 12 PM - 10 PM</h1>
-                </animated.div>
+                </animated.div></Link>
                 <animated.div style={card4_spring} className={styles.card}>
                     <img className={styles.card_img} src="/tassili.jpeg" />
                     <h1 className={styles.card_text}>Tassili's Raw Reality</h1>
