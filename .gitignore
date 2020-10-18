@@ -1,2 +1,3 @@
 .env
+./python/sheets_data.json
 /node_modules
