@@ -2,7 +2,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from matplotlib import pyplot as plt
 from matplotlib import ticker as tick
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta, date
 import numpy as np
 import random
 import re
@@ -16,38 +16,36 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('sheets_data.json', sco
 client = gspread.authorize(creds)
 
 sheet = client.open("Orders").sheet1
-
 list_of_orders = sheet.get_all_values()
 
 #initialize dictionary for each hour in a day
-hours = dict() 
+hours_day = dict() 
 i = 0
 while i < 24:
-    hours[i] = dict()
+    hours_day[i] = dict()
     i = i + 1
 
 #iterate through rows in sheet, pulling time and item of order
-items = dict()
 menu = []
 open_hour = 12
 close_hour = 22
 for order in list_of_orders:
     time = datetime.fromtimestamp(int(order[1]) - 14400, timezone.utc)
+    elapsed = datetime.now() - time.replace(tzinfo=None)
+    elapsed_day = elapsed.days
     hour = time.hour
     order = order[2]
     foods = re.split(",", order)
     for food in foods:
         if hour in range(open_hour, close_hour):
-            if food in items:
-                items[food] = items[food] + 1
-            else:
-                items[food] = 1
-            if food in hours[hour]:
-                hours[hour][food] = hours[hour][food] + 1
-            else:
-                hours[hour][food] = 1
             if food not in menu:
-                menu.append(food)
+                    menu.append(food)
+            if elapsed_day <= 1:
+                if food in hours_day[hour]:
+                    hours_day[hour][food] = hours_day[hour][food] + 1
+                else:
+                    hours_day[hour][food] = 1
+            
 ##generate x axis labels based on opening/closing hours
 x_labels = []
 for i in range(open_hour, close_hour + 1):
@@ -63,7 +61,6 @@ for i in range(open_hour, close_hour + 1):
     else:
         label += " PM"
     x_labels.append(label)
-print(x_labels)
 ##format graph
 barWidth = .5/len(menu)
 position_base = np.arange(0,24,1)
@@ -78,11 +75,14 @@ plt.xlim(12-.3, 21+.3)
 plt.ylabel('Number of Orders')
 ax.set_title('Orders/Hour')
 ax.yaxis.set_major_locator(tick.MultipleLocator(1))
+max_val = 0
 for menu_item in menu: #construct each bar
     bar = []
-    for order_hour in hours:
-        if menu_item in hours[order_hour]:
-            bar.append(hours[order_hour][menu_item])
+    for order_hour in hours_day:
+        if menu_item in hours_day[order_hour]:
+            if hours_day[order_hour][menu_item] > max_val:
+                max_val = hours_day[order_hour][menu_item]
+            bar.append(hours_day[order_hour][menu_item])
         else:
             bar.append(.05)
     r = random.random()
@@ -91,6 +91,7 @@ for menu_item in menu: #construct each bar
     rgb = (r, g, b)
     plt.bar((position_base + i), bar, color=rgb, width = barWidth, edgecolor = 'white', label = menu_item, align='edge')
     i = i + .5/len(menu)
+<<<<<<< HEAD:python/spreadsheet.py
 
 plt.legend()
 plt.savefig('../public/test.png')   
@@ -108,3 +109,9 @@ mpld3.save_json(plt.figure(), "../public/test.json")
 #plt.bar(x_pos, ordered_quantities, color='blue')
 #plt.xticks(x_pos, ordered_foods)
 #plt.show()
+=======
+plt.ylim(0, max(round(max_val) + .5, 1))
+plt.legend()   
+plt.savefig('../public/avg_day.png')
+plt.show()
+>>>>>>> 6f76d6e7c67a4f7354fe70d0d5df3499aff164ed:python/spreadsheet_day.py

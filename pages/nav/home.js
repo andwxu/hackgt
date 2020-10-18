@@ -98,6 +98,7 @@ export default function Home() {
                 <Link href="/"><button className={styles.button}>Logout</button></Link>
             </div>
             <div className={styles.bottom_nav}>
+                <Link href="/nav/deal"><img className={styles.bottom_deals} src="/deals.png" /></Link>
                 <Link href="/nav/home"><img className={styles.bottom_img} src="/bottom.png" /></Link>
             </div>
         </div>
