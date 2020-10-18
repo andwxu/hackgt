@@ -106,4 +106,3 @@ for menu_item in menu: #construct each bar
 plt.ylim(0, max(round(max_val) + .5, 1))
 plt.legend()   
 plt.savefig('../public/avg_month.png')
-plt.show()

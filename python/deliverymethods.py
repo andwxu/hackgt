@@ -18,10 +18,7 @@ for order in list_of_orders:
 types = ["Dine-in", 'Curbside', 'Delivery']
 fig, ax = plt.subplots()
 values = list(deliv_methods.values())
-print(values)
-print(types)
 ax.pie(values, labels=types, autopct='%1.2f%%')
 ax.set_title("Customer Delivery Method Preference")
 plt.savefig('../public/delivery_types.png')
-plt.show()
 

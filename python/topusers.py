@@ -18,9 +18,7 @@ for order in list_of_orders:
 types = ['asdonelan', 'andwxu', 'ppunmaneeluk', 'aditibhatia']
 fig, ax = plt.subplots()
 values = list(deliv_methods.values())
-print(values)
-print(types)
 ax.pie(values, labels=types, autopct='%1.2f%%')
 ax.set_title("Your Top Customers")
-plt.show()
+plt.savefig('../public/top_users.png')
 
