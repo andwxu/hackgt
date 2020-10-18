@@ -6,7 +6,6 @@ from datetime import datetime, timezone, timedelta, date
 import numpy as np
 import random
 import re
-import os
 import mpld3
 
 
@@ -93,7 +92,7 @@ ax.margins(2,0)
 plt.xlim(12-.3, 21+.3)
 plt.ylim(0, 1)
 plt.ylabel('Number of Orders')
-ax.set_title('Orders/Hour')
+ax.set_title('Average Orders/Hour per Week')
 ax.yaxis.set_major_locator(tick.MultipleLocator(1))
 max_val = 0
 for menu_item in menu: #construct each bar

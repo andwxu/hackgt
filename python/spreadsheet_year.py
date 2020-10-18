@@ -6,7 +6,6 @@ from datetime import datetime, timezone, timedelta, date
 import numpy as np
 import random
 import re
-import os
 import mpld3
 
 
@@ -14,7 +13,6 @@ import mpld3
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name('sheets_data.json', scope)
 client = gspread.authorize(creds)
-
 sheet = client.open("Orders").sheet1
 list_of_orders = sheet.get_all_values()
 
